@@ -265,7 +265,7 @@ nav a:hover {
 
 .gallery-item.large {
     grid-row: span 2;
-    aspect-ratio: auto;
+    aspect-ratio: 3 / 4;
 }
 
 .gallery-item.wide {
