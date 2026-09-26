@@ -1,0 +1,439 @@
+/* ================================
+   FAUXTO BOOTH
+   Main Stylesheet
+================================ */
+
+:root {
+    --black: #111111;
+    --off-white: #f4f1ea;
+    --soft-grey: #d8d2c7;
+    --white: #ffffff;
+    --border: #c9c3b9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--off-white);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: 0.92;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.92;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.site-header {
+    width: 100%;
+    padding: 28px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    opacity: 0.55;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: calc(100vh - 77px);
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.hero-image {
+    min-height: 650px;
+    background: var(--black);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vw;
+}
+
+.hero-text {
+    max-width: 420px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.button {
+    display: inline-block;
+    width: fit-content;
+    padding: 15px 26px;
+    border: 1px solid var(--black);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.button:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.button-light {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.button-light:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+
+/* ================================
+   INTRODUCTION
+================================ */
+
+.intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 160px 5vw;
+}
+
+.intro > p:not(.eyebrow) {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.intro > p:last-child {
+    margin-top: 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+}
+
+
+/* ================================
+   FEATURE
+================================ */
+
+.feature {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    background: var(--black);
+    color: var(--white);
+}
+
+.feature-image {
+    min-height: 750px;
+    background: #222222;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vw;
+}
+
+.feature-content p:not(.eyebrow) {
+    max-width: 400px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   GALLERY
+================================ */
+
+.gallery {
+    padding: 150px 5vw;
+}
+
+.section-heading {
+    margin-bottom: 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    background: var(--soft-grey);
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+    aspect-ratio: auto;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+}
+
+.gallery-item .image-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    padding: 160px 5vw;
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 35px;
+}
+
+.cta p:not(.eyebrow) {
+    max-width: 500px;
+    margin: 0 auto 45px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 50px 5vw;
+    background: var(--off-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-logo {
+    font-weight: bold;
+    letter-spacing: 0.14em;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.copyright {
+    text-align: right;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        padding: 22px 6vw;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-image {
+        min-height: 75vh;
+    }
+
+    .hero-content {
+        padding: 80px 6vw;
+    }
+
+    h1 {
+        font-size: clamp(3.4rem, 15vw, 6rem);
+    }
+
+    h2 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .intro {
+        padding: 100px 6vw;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-image {
+        min-height: 80vh;
+    }
+
+    .feature-content {
+        padding: 90px 6vw;
+    }
+
+    .gallery {
+        padding: 100px 6vw;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item.large,
+    .gallery-item.wide {
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .cta {
+        padding: 110px 6vw;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 6vw;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 500px) {
+
+    nav a:nth-child(1) {
+        display: none;
+    }
+
+    .hero-image {
+        min-height: 65vh;
+    }
+
+    .hero-content {
+        padding: 70px 6vw;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .intro > p:not(.eyebrow),
+    .feature-content p:not(.eyebrow),
+    .cta p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
+}
